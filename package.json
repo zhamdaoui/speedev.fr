@@ -1,0 +1,24 @@
+{
+  "name": "speedev.fr",
+  "version": "1.0.0",
+  "description": "website speedev",
+  "main": "index.html",
+  "dependencies": {
+    "serve": "^11.3.1"
+  },
+  "scripts": {
+    "start": "serve",
+    "deploy": "aws s3 sync src s3://www.speedev.fr",
+    "clear-cache": "aws cloudfront create-invalidation --distribution-id E12MV003ZC8H3U --paths \"/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhamdaoui/speedev.fr.git"
+  },
+  "author": "zouhair hamdaoui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhamdaoui/speedev.fr/issues"
+  },
+  "homepage": "https://github.com/zhamdaoui/speedev.fr#readme"
+}
